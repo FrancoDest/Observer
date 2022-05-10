@@ -81,14 +81,14 @@ namespace LibraryTests
                 decimal degressDelta = t2.Degrees - t1.Degrees;
                 System.TimeSpan timeDelta = t2.Date.ToUniversalTime() - t1.Date.ToUniversalTime();
                 expected += string.Format($"The temperature is {t2.Degrees}°C at {t2.Date:g}\r\n");
-                expected += string.Format($"    Change: {degressDelta}° in {timeDelta:g}\r\n");
+                expected += string.Format($"   Change: {degressDelta}° in {timeDelta:g}\r\n");
                 Assert.That(sw.ToString(), Is.EqualTo(expected));
 
                 this.reporter.Update(t3);
                 degressDelta = t3.Degrees - t1.Degrees;
                 timeDelta = t3.Date.ToUniversalTime() - t1.Date.ToUniversalTime();
                 expected += string.Format($"The temperature is {t3.Degrees}°C at {t3.Date:g}\r\n");
-                expected += string.Format($"    Change: {degressDelta}° in {timeDelta:g}\r\n");
+                expected += string.Format($"   Change: {degressDelta}° in {timeDelta:g}\r\n");
                 Assert.That(sw.ToString(), Is.EqualTo(expected));
             }
         }
